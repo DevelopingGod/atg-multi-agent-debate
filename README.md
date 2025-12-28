@@ -107,6 +107,10 @@ python -m unittest discover tests
 2. Global Configuration & State
 - The config.py uses a dynamic SET_DETERMINISTIC function. This allows the CLI arguments to override the LLM temperature at runtime without complex dependency injection, ensuring the --seed flag works across all nodes instantly.
 
+## Developer: Sankalp S. Indish
+- LinkedIn: https://www.linkedin.com/in/sankalp-indish/
+- GitHub: https://github.com/DevelopingGod
+
 3. Separation of Concerns
 - Graph Logic: Handled purely in graph.py.
 

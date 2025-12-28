@@ -107,13 +107,14 @@ python -m unittest discover tests
 2. Global Configuration & State
 - The config.py uses a dynamic SET_DETERMINISTIC function. This allows the CLI arguments to override the LLM temperature at runtime without complex dependency injection, ensuring the --seed flag works across all nodes instantly.
 
-## Developer: Sankalp S. Indish
-- LinkedIn: https://www.linkedin.com/in/sankalp-indish/
-- GitHub: https://github.com/DevelopingGod
-
 3. Separation of Concerns
 - Graph Logic: Handled purely in graph.py.
 
 - Execution: Handled in run_debate.py.
 
 - Business Logic: Encapsulated in nodes/. This structure allows for easy scaling (e.g., adding a "Moderator" node) without breaking the existing workflow.
+
+--
+## Developer: Sankalp S. Indish
+- LinkedIn: https://www.linkedin.com/in/sankalp-indish/
+- GitHub: https://github.com/DevelopingGod

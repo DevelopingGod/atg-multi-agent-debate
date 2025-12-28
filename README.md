@@ -51,7 +51,7 @@ debate_assignment/
 
 ### Setup
 
-*1. Clone the Repository
+1. Clone the Repository
 
 ``` Bash
 
@@ -59,7 +59,7 @@ git clone [https://github.com/YourUsername/debate_assignment.git](https://github
 cd debate_assignment
 ```
 
-* 2. Install Dependencies
+2. Install Dependencies
 
 ``` Bash
 
@@ -101,13 +101,13 @@ python -m unittest discover tests
 ```
 
 ### 🧠 Design Decisions
-* 1. The "HumanMessage" Injection
+1. The "HumanMessage" Injection
 - Llama 3 is optimized for Chat (User -> AI). If the history ends with an AIMessage (the opponent's turn), the model may refuse to speak, believing the conversation is paused. I implemented a logic layer in nodes/agents.py that injects a hidden HumanMessage ("Your opponent just argued X, please rebut") to strictly force a response.
 
-* 2. Global Configuration & State
+2. Global Configuration & State
 - The config.py uses a dynamic SET_DETERMINISTIC function. This allows the CLI arguments to override the LLM temperature at runtime without complex dependency injection, ensuring the --seed flag works across all nodes instantly.
 
-* 3. Separation of Concerns
+3. Separation of Concerns
 - Graph Logic: Handled purely in graph.py.
 
 - Execution: Handled in run_debate.py.

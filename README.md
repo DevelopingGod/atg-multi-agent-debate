@@ -65,10 +65,10 @@ cd debate_assignment
 ``` Bash
 
 pip install -r requirements.txt
-Configure API Keys Create a .env file in the root directory:
+
 ```
 
-Code snippet
+3.Configure API Keys Create a .env file in the root directory:
 ```
 # Using Groq (Free Tier) for Llama 3
 GROQ_API_KEY=gsk_your_actual_key_here

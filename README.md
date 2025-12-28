@@ -43,6 +43,7 @@ debate_assignment/
 ├── run_debate.py           # Main CLI Entry Point
 └── requirements.txt        # Dependency List
 ```
+---
 ## 🛠️ Installation
 ### Prerequisites
 1. Python 3.10 or higher
@@ -72,6 +73,7 @@ Code snippet
 # Using Groq (Free Tier) for Llama 3
 GROQ_API_KEY=gsk_your_actual_key_here
 ```
+---
 
 ### 🏃‍♂️ Usage
 - Interactive Mode
@@ -93,12 +95,14 @@ python run_debate.py --topic "Is AI dangerous?" --seed 42
 ``` Bash
 python run_debate.py --log-path ./my_audit_logs
 ```
+---
 
 ### 🧪 Testing
 Run the automated test suite to verify turn enforcement, topic validation, and agent initialization:
 ``` Bash
 python -m unittest discover tests
 ```
+---
 
 ### 🧠 Design Decisions
 1. The "HumanMessage" Injection
@@ -114,7 +118,7 @@ python -m unittest discover tests
 
 - Business Logic: Encapsulated in nodes/. This structure allows for easy scaling (e.g., adding a "Moderator" node) without breaking the existing workflow.
 
---
+---
 ## Developer: Sankalp S. Indish
 - LinkedIn: https://www.linkedin.com/in/sankalp-indish/
 - GitHub: https://github.com/DevelopingGod

@@ -42,7 +42,7 @@ debate_assignment/
 ├── graph.py                # LangGraph DAG Construction
 ├── run_debate.py           # Main CLI Entry Point
 └── requirements.txt        # Dependency List
-
+```
 ## 🛠️ Installation
 ### Prerequisites
 * 1. Python 3.10 or higher

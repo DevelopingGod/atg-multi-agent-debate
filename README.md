@@ -45,9 +45,9 @@ debate_assignment/
 ```
 ## 🛠️ Installation
 ### Prerequisites
-* 1. Python 3.10 or higher
+1. Python 3.10 or higher
 
-* 2. Graphviz (Required for DAG visualization)
+2. Graphviz (Required for DAG visualization)
 
 ### Setup
 
@@ -74,36 +74,33 @@ GROQ_API_KEY=gsk_your_actual_key_here
 ```
 
 ### 🏃‍♂️ Usage
-Interactive Mode
-Run the debate and enter a topic when prompted:
+- Interactive Mode
+- Run the debate and enter a topic when prompted:
 
 ``` Bash
-
 python run_debate.py
-Deterministic / Testing Mode
-Run with a specific seed to force temperature=0 for reproducible results:
 ```
+- Deterministic / Testing Mode
 
+- Run with a specific seed to force temperature=0 for reproducible results:
 ``` Bash
-
 python run_debate.py --topic "Is AI dangerous?" --seed 42
-Custom Logging
-Specify a custom directory for log files:
 ```
 
-``` Bash
+- Custom Logging
 
+- Specify a custom directory for log files:
+``` Bash
 python run_debate.py --log-path ./my_audit_logs
-🧪 Testing
-Run the automated test suite to verify turn enforcement, topic validation, and agent initialization:
 ```
 
+### 🧪 Testing
+Run the automated test suite to verify turn enforcement, topic validation, and agent initialization:
 ``` Bash
-
 python -m unittest discover tests
 ```
 
-##🧠 Design Decisions
+### 🧠 Design Decisions
 * 1. The "HumanMessage" Injection
 - Llama 3 is optimized for Chat (User -> AI). If the history ends with an AIMessage (the opponent's turn), the model may refuse to speak, believing the conversation is paused. I implemented a logic layer in nodes/agents.py that injects a hidden HumanMessage ("Your opponent just argued X, please rebut") to strictly force a response.
 
